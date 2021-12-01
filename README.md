@@ -19,7 +19,7 @@ A library to borrow books
 * Lombok
 * JUnit
 
-### Installing
+### Installing/Running
 
 * Download the project
 * Extract it in your desktop
