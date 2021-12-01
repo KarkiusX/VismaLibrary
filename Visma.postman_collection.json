@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "a09a93a6-71ad-41ed-b6dc-34d6a3802848",
+		"name": "Visma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Moscow\",\r\n    \"author\" : \"Chinua Achebe\",\r\n    \"category\" : \"Action\",\r\n    \"language\" : \"Russian\",\r\n    \"publication_date\" : \"2021-05-21\",\r\n    \"isbn\" : \"0-2876-3938-X\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://158.129.21.109:8080/book/",
+					"protocol": "http",
+					"host": [
+						"158",
+						"129",
+						"21",
+						"109"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://158.129.21.109:8080/book/1",
+					"protocol": "http",
+					"host": [
+						"158",
+						"129",
+						"21",
+						"109"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TakeFromLibrary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://158.129.21.109:8080/book/0e303739-4bd4-4efc-b3ce-0d11fb983ff5/Karolis/20",
+					"protocol": "http",
+					"host": [
+						"158",
+						"129",
+						"21",
+						"109"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"0e303739-4bd4-4efc-b3ce-0d11fb983ff5",
+						"Karolis",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFilterBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://158.129.21.109:8080/book/filter?author=Karolis&language=Lithuanian&category=History&taken=true",
+					"protocol": "http",
+					"host": [
+						"158",
+						"129",
+						"21",
+						"109"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "Karolis"
+						},
+						{
+							"key": "language",
+							"value": "Lithuanian"
+						},
+						{
+							"key": "category",
+							"value": "History"
+						},
+						{
+							"key": "taken",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
