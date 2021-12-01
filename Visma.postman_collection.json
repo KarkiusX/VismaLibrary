@@ -20,13 +20,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://158.129.21.109:8080/book/",
+					"raw": "http://localhost:8080/book/",
 					"protocol": "http",
 					"host": [
-						"158",
-						"129",
-						"21",
-						"109"
+						"localhost"
 					],
 					"port": "8080",
 					"path": [
@@ -43,18 +40,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://158.129.21.109:8080/book/1",
+					"raw": "http://localhost:8080/book/2551213a-9c68-46ac-835f-81341c685337",
 					"protocol": "http",
 					"host": [
-						"158",
-						"129",
-						"21",
-						"109"
+						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"book",
-						"1"
+						"2551213a-9c68-46ac-835f-81341c685337"
 					]
 				}
 			},
@@ -66,13 +60,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://158.129.21.109:8080/book/0e303739-4bd4-4efc-b3ce-0d11fb983ff5/Karolis/20",
+					"raw": "http://localhost:8080/book/0e303739-4bd4-4efc-b3ce-0d11fb983ff5/Karolis/20",
 					"protocol": "http",
 					"host": [
-						"158",
-						"129",
-						"21",
-						"109"
+						"localhost"
 					],
 					"port": "8080",
 					"path": [
@@ -91,13 +82,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://158.129.21.109:8080/book/filter?author=Karolis&language=Lithuanian&category=History&taken=true",
+					"raw": "http://localhost:8080/book/filter?author=Karolis&language=Lithuanian&category=History&taken=false",
 					"protocol": "http",
 					"host": [
-						"158",
-						"129",
-						"21",
-						"109"
+						"localhost"
 					],
 					"port": "8080",
 					"path": [
@@ -119,7 +107,7 @@
 						},
 						{
 							"key": "taken",
-							"value": "true"
+							"value": "false"
 						}
 					]
 				}
@@ -132,17 +120,34 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://158.129.21.109:8080/book",
+					"raw": "http://localhost:8080/book",
 					"protocol": "http",
 					"host": [
-						"158",
-						"129",
-						"21",
-						"109"
+						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book/d6057f5e-66a0-45e6-81cd-2d82c9620820",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"d6057f5e-66a0-45e6-81cd-2d82c9620820"
 					]
 				}
 			},
