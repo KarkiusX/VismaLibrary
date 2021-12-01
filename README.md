@@ -33,5 +33,10 @@ A library to borrow books
 ### Testing
 
 * If you are using IDE you can configure how to run tests ether by using interface or by CLI
-* If you are using CLI go to project folder and write gradle test --TheClassYouWantToTest
+* If you are using CLI go to project folder and write
+ 
+```
+gradle test --TheClassYouWantToTest
+```
+
 * In IDE(if Intellij) go to Settings-> Build, Execution, Deployment->Build Tools->Gradle and in in select field there is Run Testing using and select Intellij
