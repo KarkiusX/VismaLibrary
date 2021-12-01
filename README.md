@@ -29,6 +29,7 @@ A library to borrow books
 ### Using
 
 * It only supports REST calls, so you need external tool like [Postman](https://www.postman.com/downloads/) to send requests.
+* You can import existing request collection [PostmanCollection](https://github.com/KarkiusX/VismaLibrary/blob/master/Visma.postman_collection.json)
 
 ### Testing
 
