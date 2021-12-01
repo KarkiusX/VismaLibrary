@@ -40,4 +40,4 @@ A library to borrow books
 gradlew test
 ```
 
-* In IDE(if Intellij) go to Settings-> Build, Execution, Deployment->Build Tools->Gradle and in in select field there is Run Testing using and select Intellij
+* In IDE(if IntelliJ) go to Settings-> Build, Execution, Deployment->Build Tools->Gradle and in in select field there is Run Testing using and select IntelliJ
