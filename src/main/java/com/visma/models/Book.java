@@ -3,6 +3,7 @@ package com.visma.models;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.visma.dto.BookDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,13 +14,12 @@ import java.util.Date;
 import java.util.UUID;
 
 @Getter @Setter @NoArgsConstructor
-public class Book {
+public class Book extends BookDto {
     private String Name;
     private String Author;
     private String Category;
     private String Language;
 
-    @JsonFormat(pattern="yyyy-MM-dd")
     private Date Publication_date;
 
     private String ISBN;

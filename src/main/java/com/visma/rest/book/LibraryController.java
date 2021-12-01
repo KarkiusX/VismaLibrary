@@ -17,9 +17,26 @@ import java.util.stream.Collectors;
 @RestController
 public class LibraryController {
 
-    @Autowired
-    private Library library;
+    private final Library library;
 
+    LibraryController(Library library) {
+        this.library = library;
+    }
+
+    /**
+     * Retrieve all books
+     * @return books
+     */
+    @GetMapping("/book")
+    public ResponseEntity getAllBooksFromLibrary()
+    {
+       List<Book> bookList = library.getBookList();
+
+       if(bookList.size() == 0)
+           return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+
+       return ResponseEntity.ok(bookList);
+    }
     /**
      * EndPoint to get book
      * @param guid The book id
@@ -119,7 +136,7 @@ public class LibraryController {
      * @param taken Filter by taken or available
      * @return filtered list
      */
-    @GetMapping("/book/filter/")
+    @GetMapping("/book/filter")
     public ResponseEntity FilterBooksBy(@RequestParam(required = false) String author, @RequestParam(required = false) String category,
                                         @RequestParam(required = false) String language, @RequestParam(required = false) String name,
                                         @RequestParam(required = false) Boolean taken)
@@ -136,8 +153,15 @@ public class LibraryController {
             if(name != null)
                 AllParametersPass.add(book.getName().equals(name));
             if(taken != null)
-                AllParametersPass.add(library.BookTake(book));
-
+            {
+                if(taken)
+                {
+                    boolean bookTaken = library.BookTake(book);
+                    AllParametersPass.add(bookTaken);
+                }
+                else
+                    AllParametersPass.add(library.BookTake(book) == false ? true : false);
+            }
 
             if(AllParametersPass.contains(false))
                 return false;

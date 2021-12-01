@@ -18,5 +18,4 @@ public class TakenBook {
         this.Who = Who;
         this.Period = Period;
     }
-
 }

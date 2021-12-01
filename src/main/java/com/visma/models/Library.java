@@ -1,16 +1,16 @@
 package com.visma.models;
 
-import com.visma.dataSave.JSONDataBook;
+import com.visma.datasave.JSONDataBook;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Component
+@Service
 @Getter
 @Setter
 @NoArgsConstructor
@@ -46,7 +46,7 @@ public class Library {
         JSONDataBook.SaveData(bookList);
     }
     /**
-     *
+     * Take book from library
      * @param book Taken book
      * @param user Who took it
      * @param period For how long
@@ -55,6 +55,12 @@ public class Library {
     {
         booksTaken.put(book, new TakenBook(user, period));
     }
+
+    /**
+     * Remove book from library
+     * @param book
+     * @throws IOException
+     */
     public void RemoveBook(Book book) throws IOException
     {
         bookList.remove(book);
@@ -70,19 +76,21 @@ public class Library {
     public boolean BookTake(Book book)
     {
         if(booksTaken.containsKey(book))
+        {
+            System.out.println("Taken");
             return true;
+        }
         return false;
     }
 
     /**
-     * User reached borrow limit
+     * Check if User reached borrow limit
      * @param user User to check
      * @return true if reached otherwise false
      */
     public boolean ReachedCountOfTake(String user)
     {
        List<TakenBook> books = booksTaken.values().stream().filter(book -> book.getWho().equals(user)).collect(Collectors.toList());
-       System.out.println("Book" + books.size());
        if(books.size() == 3)
        {
            return true;
