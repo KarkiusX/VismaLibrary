@@ -1,0 +1,28 @@
+[ {
+  "Publication_date" : "2021-05-20",
+  "name" : "Pasaulis",
+  "language" : "Lithuanian",
+  "guid" : "11b2b93d-9799-4f87-9c72-51dc9eba8333",
+  "publication_date" : "2021-05-20",
+  "author" : "Karolis",
+  "category" : "History",
+  "isbn" : "XV324-DF264"
+}, {
+  "Publication_date" : "2021-05-20",
+  "name" : "Dvasia",
+  "language" : "English",
+  "guid" : "4ce3fcd7-c45d-40d4-88ed-db24db847907",
+  "publication_date" : "2021-05-20",
+  "author" : "Benas",
+  "category" : "Action",
+  "isbn" : "XK324-DF234"
+}, {
+  "Publication_date" : "2021-05-20",
+  "name" : "Dangus",
+  "language" : "Lithuanian",
+  "guid" : "f9373e8e-07fa-4678-8fcf-a27553e117a3",
+  "publication_date" : "2021-05-20",
+  "author" : "Mykolas",
+  "category" : "History",
+  "isbn" : "XC324-DF234"
+} ]
